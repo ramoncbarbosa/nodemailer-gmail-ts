@@ -5,8 +5,6 @@ Este projeto é um exemplo de aplicação Node.js utilizando TypeScript para o e
 ## Funcionalidades
 
 - **Envio de E-mails:** Permite o envio de e-mails personalizados a partir de uma conta Gmail.
-- **API RESTful:** Fornece um endpoint que pode ser acessado por clientes HTTP para enviar e-mails.
-- **Configuração Simples:** Utiliza o Nodemailer, uma biblioteca popular e bem documentada para envio de e-mails.
 
 ## Tecnologias Utilizadas
 
