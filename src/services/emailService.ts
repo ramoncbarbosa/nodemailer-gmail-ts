@@ -24,7 +24,7 @@ export const sendEmail: IEmailService['sendEmail'] = async (to, subject, text) =
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
-      secure: true, // true para 465, false para outras portas
+      secure: true,
       auth: {
         type: 'OAuth2',
         user: process.env.USER_EMAIL,
