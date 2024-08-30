@@ -4,16 +4,17 @@ Este projeto é um exemplo de aplicação Node.js utilizando TypeScript para o e
 
 ## Funcionalidades
 
-- **Envio de E-mails:** Permite o envio de e-mails personalizados a partir de uma conta Gmail.
+- **Envio de E-mails:** Permite o envio de e-mails personalizados a partir de uma conta Gmail usando OAuth2 para autenticação segura.
 
 ## Tecnologias Utilizadas
 
-- **Node.js:** Ambiente de execução para JavaScript no servidor.
-- **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática ao código.
+- **Node.js (v20.16.0):** Ambiente de execução para JavaScript no servidor.
+- **TypeScript (v5.5.4):** Superconjunto de JavaScript que adiciona tipagem estática ao código.
 - **Express:** Framework web minimalista para Node.js, utilizado para criar a API.
 - **Nodemailer:** Módulo para envio de e-mails via Node.js.
 - **Dotenv:** Utilizado para gerenciar variáveis de ambiente de forma segura.
 - **Nodemon:** Ferramenta que reinicia automaticamente o servidor quando alterações são detectadas nos arquivos do projeto.
+- **Google APIs:** Biblioteca usada para gerenciar a autenticação OAuth2 e obter tokens de acesso para envio seguro de e-mails.
 
 ## Usabilidade
 
@@ -37,9 +38,12 @@ cd nome-do-repositorio
 # Instale as dependências
 npm install
 
-# Crie e configure as variáveis de ambiente
-echo "GMAIL_USER=seu.email@gmail.com" > .env
-echo "GMAIL_PASS=sua_senha_de_aplicativo" >> .env
+# Crie e configure as variáveis de ambiente com as 5 entradas
+echo "CLIENT_ID=seu_client_id" > .env
+echo "CLIENT_SECRET=seu_client_secret" >> .env
+echo "REFRESH_TOKEN=seu_refresh_token" >> .env
+echo "ACCESS_TOKEN=seu_access_token" >> .env
+echo "USER_EMAIL=seu.email@gmail.com" >> .env
 
 # Inicie a aplicação com Nodemon
 npx nodemon src/index.ts
