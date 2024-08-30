@@ -10,7 +10,7 @@ const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
-  'https://developers.google.com/oauthplayground' // Redirecionamento do OAuth Playground
+  'https://developers.google.com/oauthplayground' 
 );
 
 oauth2Client.setCredentials({
@@ -31,7 +31,7 @@ export const sendEmail: IEmailService['sendEmail'] = async (to, subject, text) =
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
         refreshToken: process.env.REFRESH_TOKEN,
-        accessToken: accessToken.token || '', // Acesso ao token ou string vazia se não estiver disponível
+        accessToken: accessToken.token || '', 
       },
     });
 
